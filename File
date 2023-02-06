@@ -1,0 +1,109 @@
+/*****************************************************************************************************************/
+/*                                  What Country Should you Live in BuzzFeed Quiz?                               */
+/*                                                      ICS3C                                                    */
+/*                                                  by Hasher Quoom                                              */
+/*                                               last updated: 3/21/19                                           */
+/*                                                                                                               */
+/*   This is a quiz to guess which is the best country for the user to live in by answering the questions asked  */
+/*   I made this specific program to be short, so I can learn the basics and essentials of Java programming      */
+/*****************************************************************************************************************/
+class BuzzFeedQuiz
+{
+  public static void main (String args [])
+  {
+    
+    char BuzzFeedQuiz;  
+    
+    System.out.println("________________________________________________________"); 
+    System.out.println("| Welcome to my quiz: What country should you live in? |"); 
+    System.out.println("|               Press enter to continue.               |");                       
+    System.out.println("|______________________________________________________|"); 
+    BuzzFeedQuiz = In.getChar(); 
+    System.out.println("The first question is:");                     
+    System.out.println("Do you like over-populated areas?");
+    System.out.println("Please answer [Y] if yes or answer [N] if no.");
+    BuzzFeedQuiz = In.getChar();
+    
+    if(BuzzFeedQuiz == 'Y' || BuzzFeedQuiz == 'y') 
+    {
+      System.out.println("Do you like to experience extremely warm weather?"); //This code occurs if the user answers yes to the "overpopulated" question
+      System.out.println("Please answer [Y] if yes or answer [N] if no.");
+      BuzzFeedQuiz = In.getChar();
+      
+      if(BuzzFeedQuiz == 'Y' || BuzzFeedQuiz == 'y')
+      {
+        System.out.println("Do you like cricket?"); //This code occurs if the user answers yes to the "warm weather" question
+        System.out.println("Please answer [Y] if yes or answer [N] if no.");
+        BuzzFeedQuiz = In.getChar();
+        
+        if(BuzzFeedQuiz == 'Y' || BuzzFeedQuiz == 'y') 
+        {
+          System.out.println("You should live in Pakistan!"); //This code occurs if the user answers yes to the "cricket" question
+        }
+        else if(BuzzFeedQuiz == 'N' || BuzzFeedQuiz == 'n') 
+        {
+          System.out.println("You should live in Iraq!"); //This code occurs if the user answers no to the "cricket" question
+          BuzzFeedQuiz = 'a';
+        }
+      }
+      else if(BuzzFeedQuiz == 'N' || BuzzFeedQuiz == 'n')
+      {
+        System.out.println("Do you like social media?"); //This code occurs if the user answers no to the "warm weather" question
+        System.out.println("Please answer [Y] if yes or answer [N] if no.");
+        BuzzFeedQuiz = In.getChar();
+        
+        if(BuzzFeedQuiz == 'Y' || BuzzFeedQuiz == 'y') 
+        {
+          System.out.println("You should live in America!"); //This code occurs if the user answers yes to the "social media" question
+        }
+        else if(BuzzFeedQuiz == 'N' || BuzzFeedQuiz == 'n') 
+        {
+          System.out.println("You should live in China!"); //This code occurs if the user answers no to the "social media" question
+          BuzzFeedQuiz = 'a';
+        }
+      }
+    }
+    else if(BuzzFeedQuiz == 'N' || BuzzFeedQuiz == 'n')
+    {
+      System.out.println("Do you like to experience extremely snowy weather?"); //This code occurs if the user answers no to the "overpopulated" question 
+      System.out.println("Please answer [Y] if yes or answer [N] if no.");
+      BuzzFeedQuiz = In.getChar();
+      
+      if(BuzzFeedQuiz == 'Y' || BuzzFeedQuiz == 'y')
+      {
+        System.out.println("Do you like beavertails?"); //This code occurs if the user answers yes to the "snowy weather" question
+        System.out.println("Please answer [Y] if yes or answer [N] if no.");
+        BuzzFeedQuiz = In.getChar();
+        
+        if(BuzzFeedQuiz == 'Y' || BuzzFeedQuiz == 'y')
+        {
+          System.out.println("You should live in Canada!"); //This code occurs if the user answers yes to the "beavertails" question
+        }
+        else if(BuzzFeedQuiz == 'N' || BuzzFeedQuiz == 'n')
+        {
+          System.out.println("You should live in Russia!"); //This code occurs if the user answers no to the "beavertails" question
+          BuzzFeedQuiz = 'a';
+        }
+      }
+      
+      
+      else  if(BuzzFeedQuiz == 'N' || BuzzFeedQuiz == 'n')
+      {
+        System.out.println("Do you like islands?");
+        System.out.println("Please answer [Y] if yes or answer [N] if no."); //This code occurs if the user answers no to the "snowy weather" question
+        BuzzFeedQuiz = In.getChar();
+        
+        if(BuzzFeedQuiz == 'Y' || BuzzFeedQuiz == 'y')
+        {  
+          System.out.println("You should live in the Bahamas!"); //This code occurs if the user answers yes to the "islands" question
+        }
+        
+        else if(BuzzFeedQuiz == 'N' || BuzzFeedQuiz == 'n')
+        {  
+          System.out.println("You should live in Monaco!"); //This code occurs if the user answers no to the "islands" question
+        }
+      }
+    }
+    
+  }
+}
